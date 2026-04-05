@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dressup">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies — The Collection</title>
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-orb bg-orb-1"></div>
+<div class="bg-orb bg-orb-2"></div>
+<div class="bg-orb bg-orb-3"></div>
+<div class="noise-layer"></div>
+
+<nav class="navbar">
+    <a href="index.html" class="nav-brand">◈ The Collection</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="anime.html">Anime</a></li>
+        <li><a href="movies.html" class="active">Movies</a></li>
+        <li><a href="manhwa.html">Manhwa</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="https://www.google.com/">Google it</a></li>
+    </ul>
+    <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="dressup" title="Dress Up Darling">🧵</button>
+        <button class="theme-btn" data-theme="solo"    title="Solo Leveling">⚔️</button>
+        <button class="theme-btn" data-theme="manga"   title="Manga">📖</button>
+        <button class="theme-btn" data-theme="avenger" title="Avenger">🦸</button>
+        <button class="theme-btn" data-theme="manhwa"  title="Manhwa">🌙</button>
+    </div>
+</nav>
+
+<div class="page-wrap">
+    <div class="page-hero">
+        <p class="hero-eyebrow">Category 02</p>
+        <h1 class="hero-title"><em>Movies</em></h1>
+        <div class="hero-divider"></div>
+        <p style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);letter-spacing:0.2em;">
+            <span id="itemCount">—</span> titles &nbsp;·&nbsp; Hollywood & World Cinema
+        </p>
+    </div>
+
+    <div class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search movies by title, genre...">
+    </div>
+
+    <div class="sort-bar">
+        <span style="font-family:var(--font-mono);font-size:9px;color:var(--text-muted);letter-spacing:0.3em;text-transform:uppercase;margin-right:4px;">Sort:</span>
+        <button class="sort-btn active" data-sort="rating">⭐ Rating</button>
+        <button class="sort-btn" data-sort="alpha">A–Z</button>
+        <button class="sort-btn" data-sort="genre">Genre</button>
+        <button class="sort-btn" data-sort="status">Status</button>
+        <button class="sort-btn" data-sort="rank">My Rank</button>
+    </div>
+
+    <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="watching">▶ Watching</button>
+        <button class="filter-tab" data-filter="completed">✓ Watched</button>
+        <button class="filter-tab" data-filter="wishlist">◇ Watchlist</button>
+    </div>
+
+    <div id="cardList">
+
+        <div class="glass-card full-card" data-rank="1" data-title="Interstellar" data-genre="Sci-Fi / Drama" data-rating="9.3" data-episodes="2h 49m" data-episode-count="0" data-status="completed" data-watch="" data-read="">
+            <div class="full-card-rank">01</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Interstellar</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-scifi">Sci-Fi</span>
+                    <span class="meta-chip genre-drama">Drama</span>
+                    <span class="meta-chip">2h 49m</span>
+                </div>
+                <span class="badge badge-completed">Watched</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">9.3</div>
+                <div class="full-score-sub">/ 10 IMDb</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="2" data-title="Oppenheimer" data-genre="Historical Drama / Thriller" data-rating="9.1" data-episodes="3h 0m" data-episode-count="0" data-status="completed" data-watch="" data-read="">
+            <div class="full-card-rank">02</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Oppenheimer</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip">Historical</span>
+                    <span class="meta-chip genre-drama">Drama</span>
+                    <span class="meta-chip genre-thriller">Thriller</span>
+                    <span class="meta-chip">3h 0m</span>
+                </div>
+                <span class="badge badge-completed">Watched</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">9.1</div>
+                <div class="full-score-sub">/ 10 IMDb</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="3" data-title="The Dark Knight" data-genre="Action / Thriller / Crime" data-rating="9.0" data-episodes="2h 32m" data-episode-count="0" data-status="completed" data-watch="" data-read="">
+            <div class="full-card-rank">03</div>
+            <div class="full-card-body">
+                <div class="full-card-title">The Dark Knight</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-action">Action</span>
+                    <span class="meta-chip genre-thriller">Thriller</span>
+                    <span class="meta-chip">Crime</span>
+                    <span class="meta-chip">2h 32m</span>
+                </div>
+                <span class="badge badge-completed">Watched</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">9.0</div>
+                <div class="full-score-sub">/ 10 IMDb</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="4" data-title="Inception" data-genre="Sci-Fi / Thriller / Action" data-rating="8.8" data-episodes="2h 28m" data-episode-count="0" data-status="completed" data-watch="" data-read="">
+            <div class="full-card-rank">04</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Inception</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-scifi">Sci-Fi</span>
+                    <span class="meta-chip genre-thriller">Thriller</span>
+                    <span class="meta-chip genre-action">Action</span>
+                    <span class="meta-chip">2h 28m</span>
+                </div>
+                <span class="badge badge-completed">Watched</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">8.8</div>
+                <div class="full-score-sub">/ 10 IMDb</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="5" data-title="Dune: Part Two" data-genre="Sci-Fi / Epic Adventure" data-rating="8.8" data-episodes="2h 46m" data-episode-count="0" data-status="watching" data-watch="" data-read="">
+            <div class="full-card-rank">05</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Dune: Part Two</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-scifi">Sci-Fi</span>
+                    <span class="meta-chip">Epic Adventure</span>
+                    <span class="meta-chip">2h 46m</span>
+                </div>
+                <span class="badge badge-watching">Watching</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">8.8</div>
+                <div class="full-score-sub">/ 10 IMDb</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="6" data-title="Parasite" data-genre="Thriller / Drama / Dark Comedy" data-rating="8.5" data-episodes="2h 12m" data-episode-count="0" data-status="completed" data-watch="" data-read="">
+            <div class="full-card-rank">06</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Parasite</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-thriller">Thriller</span>
+                    <span class="meta-chip genre-drama">Drama</span>
+                    <span class="meta-chip genre-comedy">Dark Comedy</span>
+                    <span class="meta-chip">2h 12m</span>
+                </div>
+                <span class="badge badge-completed">Watched</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">8.5</div>
+                <div class="full-score-sub">/ 10 IMDb</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="7" data-title="Everything Everywhere All at Once" data-genre="Sci-Fi / Comedy / Drama" data-rating="7.8" data-episodes="2h 19m" data-episode-count="0" data-status="wishlist" data-watch="" data-read="">
+            <div class="full-card-rank">07</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Everything Everywhere All at Once</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-scifi">Sci-Fi</span>
+                    <span class="meta-chip genre-comedy">Comedy</span>
+                    <span class="meta-chip genre-drama">Drama</span>
+                    <span class="meta-chip">2h 19m</span>
+                </div>
+                <span class="badge badge-wishlist">Watchlist</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">7.8</div>
+                <div class="full-score-sub">/ 10 IMDb</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="8" data-title="Mad Max: Fury Road" data-genre="Action / Sci-Fi / Adventure" data-rating="8.1" data-episodes="2h 0m" data-episode-count="0" data-status="wishlist" data-watch="" data-read="">
+            <div class="full-card-rank">08</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Mad Max: Fury Road</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-action">Action</span>
+                    <span class="meta-chip genre-scifi">Sci-Fi</span>
+                    <span class="meta-chip">Adventure</span>
+                    <span class="meta-chip">2h 0m</span>
+                </div>
+                <span class="badge badge-wishlist">Watchlist</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">8.1</div>
+                <div class="full-score-sub">/ 10 IMDb</div>
+            </div>
+        </div>
+
+        <!-- ADD MORE MOVIES HERE -->
+
+    </div>
+</div>
+
+<div class="modal-backdrop" id="detailModal">
+    <div class="modal-box">
+        <button class="modal-close" id="modalCloseBtn">✕</button>
+        <div class="modal-tag" id="modalTag">MOVIE</div>
+        <h2 class="modal-title" id="modalTitle">Title</h2>
+        <div class="modal-stats">
+            <div class="stat-cell"><span class="stat-label">Genre</span><span class="stat-val" id="modalGenre">—</span></div>
+            <div class="stat-cell"><span class="stat-label">Rating</span><span class="stat-val big" id="modalRating">—</span></div>
+            <div class="stat-cell"><span class="stat-label">Runtime</span><span class="stat-val" id="modalEpisodes">—</span></div>
+            <div class="stat-cell"><span class="stat-label">Status</span><span class="stat-val" id="modalStatus">—</span></div>
+        </div>
+        <div class="modal-actions" id="modalActions"></div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('itemCount').textContent = document.querySelectorAll('.full-card').length;
+});
+</script>
+</body>
+</html>

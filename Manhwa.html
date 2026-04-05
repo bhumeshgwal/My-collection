@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dressup">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manhwa — The Collection</title>
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-orb bg-orb-1"></div>
+<div class="bg-orb bg-orb-2"></div>
+<div class="bg-orb bg-orb-3"></div>
+<div class="noise-layer"></div>
+
+<nav class="navbar">
+    <a href="index.html" class="nav-brand">◈ The Collection</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="anime.html">Anime</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="manhwa.html" class="active">Manhwa</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="https://www.google.com/">Google it</a></li>
+    </ul>
+    <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="dressup" title="Dress Up Darling">🧵</button>
+        <button class="theme-btn" data-theme="solo"    title="Solo Leveling">⚔️</button>
+        <button class="theme-btn" data-theme="manga"   title="Manga">📖</button>
+        <button class="theme-btn" data-theme="avenger" title="Avenger">🦸</button>
+        <button class="theme-btn" data-theme="manhwa"  title="Manhwa">🌙</button>
+    </div>
+</nav>
+
+<div class="page-wrap">
+    <div class="page-hero">
+        <p class="hero-eyebrow">Category 03</p>
+        <h1 class="hero-title"><em>Manhwa</em></h1>
+        <div class="hero-divider"></div>
+        <p style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);letter-spacing:0.2em;">
+            <span id="itemCount">—</span> titles &nbsp;·&nbsp; Korean Webtoons & Comics
+        </p>
+    </div>
+
+    <div class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search manhwa by title, genre...">
+    </div>
+
+    <div class="sort-bar">
+        <span style="font-family:var(--font-mono);font-size:9px;color:var(--text-muted);letter-spacing:0.3em;text-transform:uppercase;margin-right:4px;">Sort:</span>
+        <button class="sort-btn active" data-sort="rating">⭐ Rating</button>
+        <button class="sort-btn" data-sort="alpha">A–Z</button>
+        <button class="sort-btn" data-sort="genre">Genre</button>
+        <button class="sort-btn" data-sort="status">Status</button>
+        <button class="sort-btn" data-sort="episodes">Chapters</button>
+        <button class="sort-btn" data-sort="rank">My Rank</button>
+    </div>
+
+    <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="watching">▶ Reading</button>
+        <button class="filter-tab" data-filter="completed">✓ Completed</button>
+        <button class="filter-tab" data-filter="wishlist">◇ Wishlist</button>
+    </div>
+
+    <div id="cardList">
+
+        <div class="glass-card full-card" data-rank="1" data-title="Solo Leveling" data-genre="Action / Fantasy / Adventure" data-rating="9.4" data-episodes="179 Chapters" data-episode-count="179" data-status="completed" data-watch="" data-read="">
+            <div class="full-card-rank">01</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Solo Leveling</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-action">Action</span>
+                    <span class="meta-chip genre-fantasy">Fantasy</span>
+                    <span class="meta-chip">Adventure</span>
+                    <span class="meta-chip">179 Chapters</span>
+                </div>
+                <span class="badge badge-completed">Completed</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">9.4</div>
+                <div class="full-score-sub">/ 10</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="2" data-title="Omniscient Reader's Viewpoint" data-genre="Sci-Fi / Fantasy / Action" data-rating="9.2" data-episodes="Ongoing" data-episode-count="200" data-status="watching" data-watch="" data-read="">
+            <div class="full-card-rank">02</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Omniscient Reader's Viewpoint</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-scifi">Sci-Fi</span>
+                    <span class="meta-chip genre-fantasy">Fantasy</span>
+                    <span class="meta-chip genre-action">Action</span>
+                    <span class="meta-chip">Ongoing</span>
+                </div>
+                <span class="badge badge-watching">Reading</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">9.2</div>
+                <div class="full-score-sub">/ 10</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="3" data-title="The Beginning After the End" data-genre="Fantasy / Action / Isekai" data-rating="8.9" data-episodes="Ongoing" data-episode-count="180" data-status="watching" data-watch="" data-read="">
+            <div class="full-card-rank">03</div>
+            <div class="full-card-body">
+                <div class="full-card-title">The Beginning After the End</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-fantasy">Fantasy</span>
+                    <span class="meta-chip genre-action">Action</span>
+                    <span class="meta-chip">Isekai</span>
+                    <span class="meta-chip">Ongoing</span>
+                </div>
+                <span class="badge badge-watching">Reading</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">8.9</div>
+                <div class="full-score-sub">/ 10</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="4" data-title="Tower of God" data-genre="Fantasy / Adventure / Mystery" data-rating="8.8" data-episodes="600+ Chapters" data-episode-count="600" data-status="wishlist" data-watch="" data-read="">
+            <div class="full-card-rank">04</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Tower of God</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-fantasy">Fantasy</span>
+                    <span class="meta-chip">Adventure</span>
+                    <span class="meta-chip genre-thriller">Mystery</span>
+                    <span class="meta-chip">600+ Chapters</span>
+                </div>
+                <span class="badge badge-wishlist">Wishlist</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">8.8</div>
+                <div class="full-score-sub">/ 10</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="5" data-title="Nano Machine" data-genre="Action / Martial Arts / Sci-Fi" data-rating="8.5" data-episodes="Ongoing" data-episode-count="170" data-status="completed" data-watch="" data-read="">
+            <div class="full-card-rank">05</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Nano Machine</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-action">Action</span>
+                    <span class="meta-chip">Martial Arts</span>
+                    <span class="meta-chip genre-scifi">Sci-Fi</span>
+                    <span class="meta-chip">Ongoing</span>
+                </div>
+                <span class="badge badge-completed">Completed</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">8.5</div>
+                <div class="full-score-sub">/ 10</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="6" data-title="Eleceed" data-genre="Action / Comedy / Superhero" data-rating="8.3" data-episodes="Ongoing" data-episode-count="260" data-status="wishlist" data-watch="" data-read="">
+            <div class="full-card-rank">06</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Eleceed</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-action">Action</span>
+                    <span class="meta-chip genre-comedy">Comedy</span>
+                    <span class="meta-chip">Superhero</span>
+                    <span class="meta-chip">Ongoing</span>
+                </div>
+                <span class="badge badge-wishlist">Wishlist</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">8.3</div>
+                <div class="full-score-sub">/ 10</div>
+            </div>
+        </div>
+
+        <!-- ADD MORE MANHWA HERE -->
+
+    </div>
+</div>
+
+<div class="modal-backdrop" id="detailModal">
+    <div class="modal-box">
+        <button class="modal-close" id="modalCloseBtn">✕</button>
+        <div class="modal-tag" id="modalTag">MANHWA</div>
+        <h2 class="modal-title" id="modalTitle">Title</h2>
+        <div class="modal-stats">
+            <div class="stat-cell"><span class="stat-label">Genre</span><span class="stat-val" id="modalGenre">—</span></div>
+            <div class="stat-cell"><span class="stat-label">Rating</span><span class="stat-val big" id="modalRating">—</span></div>
+            <div class="stat-cell"><span class="stat-label">Chapters</span><span class="stat-val" id="modalEpisodes">—</span></div>
+            <div class="stat-cell"><span class="stat-label">Status</span><span class="stat-val" id="modalStatus">—</span></div>
+        </div>
+        <div class="modal-actions" id="modalActions"></div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('itemCount').textContent = document.querySelectorAll('.full-card').length;
+});
+</script>
+</body>
+</html>

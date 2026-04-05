@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dressup">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime — The Collection</title>
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-orb bg-orb-1"></div>
+<div class="bg-orb bg-orb-2"></div>
+<div class="bg-orb bg-orb-3"></div>
+<div class="noise-layer"></div>
+
+<nav class="navbar">
+    <a href="index.html" class="nav-brand">◈ The Collection</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="anime.html" class="active">Anime</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="manhwa.html">Manhwa</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="https://www.google.com/">Google it</a></li>
+    </ul>
+    <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="dressup" title="Dress Up Darling">🧵</button>
+        <button class="theme-btn" data-theme="solo"    title="Solo Leveling">⚔️</button>
+        <button class="theme-btn" data-theme="manga"   title="Manga">📖</button>
+        <button class="theme-btn" data-theme="avenger" title="Avenger">🦸</button>
+        <button class="theme-btn" data-theme="manhwa"  title="Manhwa">🌙</button>
+    </div>
+</nav>
+
+<div class="page-wrap">
+    <div class="page-hero">
+        <p class="hero-eyebrow">Category 01</p>
+        <h1 class="hero-title"><em>Anime</em></h1>
+        <div class="hero-divider"></div>
+        <p style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);letter-spacing:0.2em;">
+            <span id="itemCount">—</span> titles &nbsp;·&nbsp; Sorted by Rating
+        </p>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search anime by title, genre...">
+    </div>
+
+    <!-- SORT BAR -->
+    <div class="sort-bar">
+        <span style="font-family:var(--font-mono);font-size:9px;color:var(--text-muted);letter-spacing:0.3em;text-transform:uppercase;margin-right:4px;">Sort:</span>
+        <button class="sort-btn active" data-sort="rating">⭐ Rating</button>
+        <button class="sort-btn" data-sort="alpha">A–Z</button>
+        <button class="sort-btn" data-sort="genre">Genre</button>
+        <button class="sort-btn" data-sort="status">Status</button>
+        <button class="sort-btn" data-sort="episodes">Episodes</button>
+        <button class="sort-btn" data-sort="rank">My Rank</button>
+    </div>
+
+    <!-- FILTER TABS -->
+    <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="watching">▶ Watching</button>
+        <button class="filter-tab" data-filter="completed">✓ Completed</button>
+        <button class="filter-tab" data-filter="wishlist">◇ Wishlist</button>
+    </div>
+
+    <!-- CARD LIST
+         ─────────────────────────────────────
+         HOW TO ADD MORE ANIME:
+         Copy a .full-card block and fill in:
+           data-rank      = your personal rank (1, 2, 3...)
+           data-title     = anime title
+           data-genre     = genre string
+           data-rating    = score out of 10
+           data-episodes  = display string e.g. "24 Episodes"
+           data-episode-count = number only for sorting
+           data-status    = "completed" | "watching" | "wishlist"
+           data-watch     = stream URL (leave empty if none)
+           data-read      = manga URL (leave empty if none)
+         ───────────────────────────────────── -->
+    <div id="cardList">
+
+
+    <div class="glass-card full-card" data-rank="1" data-title="Attack on Titan" data-genre="Action / Drama / Dark Fantasy" data-rating="9.1" data-episodes="94 Episodes" data-status="completed">
+        <div class="full-card-rank">01</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Attack on Titan</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip genre-drama">Drama</span>
+                <span class="meta-chip genre-horror">Dark Fantasy</span>
+                <span class="meta-chip">94 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">9.1</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="2" data-title="The Eminence in Shadow" data-genre="Action / Comedy / Fantasy" data-rating="7.7" data-episodes="32 Episodes" data-status="completed">
+        <div class="full-card-rank">02</div>
+        <div class="full-card-body">
+            <div class="full-card-title">The Eminence in Shadow</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip">Comedy</span>
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip">32 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.7</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="3" data-title="I Want to Eat Your Pancreas" data-genre="Drama / Romance" data-rating="8.0" data-episodes="Movie" data-status="completed">
+        <div class="full-card-rank">03</div>
+        <div class="full-card-body">
+            <div class="full-card-title">I Want to Eat Your Pancreas</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-drama">Drama</span>
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip">Movie</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.0</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="4" data-title="Solo Leveling" data-genre="Action / Fantasy" data-rating="8.3" data-episodes="12 Episodes" data-status="completed">
+        <div class="full-card-rank">04</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Solo Leveling</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip">12 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.3</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="5" data-title="My Dress-Up Darling" data-genre="Romance / Slice of Life" data-rating="8.1" data-episodes="12 Episodes" data-status="completed">
+        <div class="full-card-rank">05</div>
+        <div class="full-card-body">
+            <div class="full-card-title">My Dress-Up Darling</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip">Slice of Life</span>
+                <span class="meta-chip">12 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.1</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="6" data-title="Rent-a-Girlfriend" data-genre="Comedy / Romance" data-rating="7.1" data-episodes="36 Episodes" data-status="completed">
+        <div class="full-card-rank">06</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Rent-a-Girlfriend</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Comedy</span>
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip">36 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.1</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="7" data-title="Your Name" data-genre="Romance / Fantasy / Drama" data-rating="8.4" data-episodes="Movie" data-status="completed">
+        <div class="full-card-rank">07</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Your Name</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip genre-drama">Drama</span>
+                <span class="meta-chip">Movie</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.4</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="8" data-title="Classroom of the Elite" data-genre="Drama / Psychological" data-rating="7.7" data-episodes="38 Episodes" data-status="completed">
+        <div class="full-card-rank">08</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Classroom of the Elite</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-drama">Drama</span>
+                <span class="meta-chip genre-thriller">Psychological</span>
+                <span class="meta-chip">38 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.7</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="9" data-title="Blue Lock" data-genre="Sports / Action / Thriller" data-rating="8.2" data-episodes="24 Episodes" data-status="completed">
+        <div class="full-card-rank">09</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Blue Lock</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Sports</span>
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip genre-thriller">Thriller</span>
+                <span class="meta-chip">24 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.2</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="10" data-title="Blue Box" data-genre="Sports / Romance / Drama" data-rating="7.9" data-episodes="Ongoing" data-status="watching">
+        <div class="full-card-rank">10</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Blue Box</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Sports</span>
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip genre-drama">Drama</span>
+                <span class="meta-chip">Ongoing</span>
+            </div>
+            <span class="badge badge-watching">Watching</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.9</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="11" data-title="Just Because" data-genre="Drama / Romance" data-rating="7.1" data-episodes="12 Episodes" data-status="completed">
+        <div class="full-card-rank">11</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Just Because</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-drama">Drama</span>
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip">12 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.1</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="12" data-title="Vinland Saga" data-genre="Action / Adventure / Drama" data-rating="8.8" data-episodes="48 Episodes" data-status="completed">
+        <div class="full-card-rank">12</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Vinland Saga</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip">Adventure</span>
+                <span class="meta-chip genre-drama">Drama</span>
+                <span class="meta-chip">48 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.8</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="13" data-title="Death Note" data-genre="Mystery / Psychological / Thriller" data-rating="8.9" data-episodes="37 Episodes" data-status="completed">
+        <div class="full-card-rank">13</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Death Note</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Mystery</span>
+                <span class="meta-chip genre-thriller">Psychological</span>
+                <span class="meta-chip genre-thriller">Thriller</span>
+                <span class="meta-chip">37 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.9</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="14" data-title="A Silent Voice" data-genre="Drama / Romance" data-rating="8.1" data-episodes="Movie" data-status="completed">
+        <div class="full-card-rank">14</div>
+        <div class="full-card-body">
+            <div class="full-card-title">A Silent Voice</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-drama">Drama</span>
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip">Movie</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.1</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="15" data-title="Jujutsu Kaisen" data-genre="Action / Fantasy / Supernatural" data-rating="8.5" data-episodes="47 Episodes" data-status="completed">
+        <div class="full-card-rank">15</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Jujutsu Kaisen</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip">47 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.5</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="16" data-title="Mushoku Tensei" data-genre="Fantasy / Adventure" data-rating="8.4" data-episodes="48 Episodes" data-status="completed">
+        <div class="full-card-rank">16</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Mushoku Tensei</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip">Adventure</span>
+                <span class="meta-chip">48 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.4</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="17" data-title="Horimiya" data-genre="Romance / Comedy / Slice of Life" data-rating="8.1" data-episodes="13 Episodes" data-status="completed">
+        <div class="full-card-rank">17</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Horimiya</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip">Comedy</span>
+                <span class="meta-chip">13 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.1</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="18" data-title="Demon Slayer" data-genre="Action / Fantasy" data-rating="8.6" data-episodes="63 Episodes" data-status="completed">
+        <div class="full-card-rank">18</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Demon Slayer</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip">63 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.6</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="19" data-title="One Piece" data-genre="Action / Adventure / Fantasy" data-rating="9.0" data-episodes="1100+ Episodes" data-status="watching">
+        <div class="full-card-rank">19</div>
+        <div class="full-card-body">
+            <div class="full-card-title">One Piece</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip">Adventure</span>
+                <span class="meta-chip">1100+ eps</span>
+            </div>
+            <span class="badge badge-watching">Watching</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">9.0</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="20" data-title="Weathering With You" data-genre="Romance / Fantasy / Drama" data-rating="7.7" data-episodes="Movie" data-status="completed">
+        <div class="full-card-rank">20</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Weathering With You</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip">Movie</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.7</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="21" data-title="My Teen Romantic Comedy SNAFU" data-genre="Comedy / Romance / Drama" data-rating="8.0" data-episodes="38 Episodes" data-status="completed">
+        <div class="full-card-rank">21</div>
+        <div class="full-card-body">
+            <div class="full-card-title">My Teen Romantic Comedy SNAFU</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Comedy</span>
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip genre-drama">Drama</span>
+                <span class="meta-chip">38 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.0</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="22" data-title="Spy x Family" data-genre="Comedy / Action" data-rating="8.4" data-episodes="37 Episodes" data-status="completed">
+        <div class="full-card-rank">22</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Spy x Family</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Comedy</span>
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip">37 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.4</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="23" data-title="Kaiju No. 8" data-genre="Action / Sci-Fi" data-rating="7.9" data-episodes="12 Episodes" data-status="completed">
+        <div class="full-card-rank">23</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Kaiju No. 8</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip genre-scifi">Sci-Fi</span>
+                <span class="meta-chip">12 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.9</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="24" data-title="Naruto" data-genre="Action / Adventure" data-rating="8.4" data-episodes="720 Episodes" data-status="completed">
+        <div class="full-card-rank">24</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Naruto</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip">Adventure</span>
+                <span class="meta-chip">720 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.4</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="25" data-title="My Hero Academia" data-genre="Action / Adventure" data-rating="7.9" data-episodes="150+ Episodes" data-status="watching">
+        <div class="full-card-rank">25</div>
+        <div class="full-card-body">
+            <div class="full-card-title">My Hero Academia</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip">Adventure</span>
+                <span class="meta-chip">Ongoing</span>
+            </div>
+            <span class="badge badge-watching">Watching</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.9</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="26" data-title="Sword Art Online" data-genre="Action / Fantasy" data-rating="7.5" data-episodes="96 Episodes" data-status="completed">
+        <div class="full-card-rank">26</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Sword Art Online</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip">96 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.5</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="27" data-title="Alya Sometimes Hides Her Feelings in Russian" data-genre="Comedy / Romance" data-rating="7.6" data-episodes="12 Episodes" data-status="completed">
+        <div class="full-card-rank">27</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Alya Sometimes Hides Her Feelings in Russian</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Comedy</span>
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip">12 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.6</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="28" data-title="Masamune-kun's Revenge" data-genre="Comedy / Romance" data-rating="6.9" data-episodes="24 Episodes" data-status="completed">
+        <div class="full-card-rank">28</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Masamune-kun's Revenge</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Comedy</span>
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip">24 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">6.9</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="29" data-title="The Beginning After the End" data-genre="Action / Fantasy" data-rating="8.0" data-episodes="Webtoon/Novel" data-status="completed">
+        <div class="full-card-rank">29</div>
+        <div class="full-card-body">
+            <div class="full-card-title">The Beginning After the End</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip">Webtoon</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.0</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="30" data-title="The Misfit of Demon King Academy" data-genre="Fantasy / Action" data-rating="7.2" data-episodes="25 Episodes" data-status="completed">
+        <div class="full-card-rank">30</div>
+        <div class="full-card-body">
+            <div class="full-card-title">The Misfit of Demon King Academy</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip">25 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.2</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="31" data-title="Scum's Wish" data-genre="Drama / Romance" data-rating="7.3" data-episodes="12 Episodes" data-status="completed">
+        <div class="full-card-rank">31</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Scum's Wish</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-drama">Drama</span>
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip">12 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.3</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="32" data-title="Dr. Stone" data-genre="Sci-Fi / Adventure" data-rating="8.1" data-episodes="57 Episodes" data-status="completed">
+        <div class="full-card-rank">32</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Dr. Stone</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-scifi">Sci-Fi</span>
+                <span class="meta-chip">Adventure</span>
+                <span class="meta-chip">57 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">8.1</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="33" data-title="The Immortal King" data-genre="Action / Comedy / Fantasy" data-rating="7.1" data-episodes="51 Episodes" data-status="completed">
+        <div class="full-card-rank">33</div>
+        <div class="full-card-body">
+            <div class="full-card-title">The Immortal King</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-action">Action</span>
+                <span class="meta-chip">Comedy</span>
+                <span class="meta-chip">51 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.1</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="34" data-title="A Couple of Cuckoos" data-genre="Comedy / Romance" data-rating="6.7" data-episodes="24 Episodes" data-status="completed">
+        <div class="full-card-rank">34</div>
+        <div class="full-card-body">
+            <div class="full-card-title">A Couple of Cuckoos</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Comedy</span>
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip">24 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">6.7</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="35" data-title="Am I Actually the Strongest?" data-genre="Fantasy / Comedy" data-rating="6.5" data-episodes="12 Episodes" data-status="completed">
+        <div class="full-card-rank">35</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Am I Actually the Strongest?</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip">Comedy</span>
+                <span class="meta-chip">12 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">6.5</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="36" data-title="Chillin' in Another World with Level 2 Super Cheat Powers" data-genre="Fantasy / Romance" data-rating="6.9" data-episodes="12 Episodes" data-status="completed">
+        <div class="full-card-rank">36</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Chillin' in Another World with Level 2 Super Cheat Powers</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip">12 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">6.9</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="37" data-title="Hunting Slimes for 300 Years" data-genre="Fantasy / Slice of Life" data-rating="7.0" data-episodes="12 Episodes" data-status="completed">
+        <div class="full-card-rank">37</div>
+        <div class="full-card-body">
+            <div class="full-card-title">Hunting Slimes for 300 Years</div>
+            <div class="full-card-meta">
+                <span class="meta-chip genre-fantasy">Fantasy</span>
+                <span class="meta-chip">Slice of Life</span>
+                <span class="meta-chip">12 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">7.0</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+
+    <div class="glass-card full-card" data-rank="38" data-title="There was a Cute Girl in the Hero’s Party..." data-genre="Romance / Comedy" data-rating="6.4" data-episodes="12 Episodes" data-status="completed">
+        <div class="full-card-rank">38</div>
+        <div class="full-card-body">
+            <div class="full-card-title">There was a Cute Girl in the Hero’s Party...</div>
+            <div class="full-card-meta">
+                <span class="meta-chip">Romance</span>
+                <span class="meta-chip">Comedy</span>
+                <span class="meta-chip">12 Episodes</span>
+            </div>
+            <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="full-card-right">
+            <div class="full-score">6.4</div>
+            <div class="full-score-sub">/ 10 IMDb</div>
+        </div>
+    </div>
+</div>
+        <!-- ADD MORE ANIME HERE following the same pattern -->
+
+    </div><!-- /cardList -->
+</div><!-- /page-wrap -->
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="detailModal">
+    <div class="modal-box">
+        <button class="modal-close" id="modalCloseBtn">✕</button>
+        <div class="modal-tag" id="modalTag">ANIME</div>
+        <h2 class="modal-title" id="modalTitle">Title</h2>
+        <div class="modal-stats">
+            <div class="stat-cell"><span class="stat-label">Genre</span><span class="stat-val" id="modalGenre">—</span></div>
+            <div class="stat-cell"><span class="stat-label">Rating</span><span class="stat-val big" id="modalRating">—</span></div>
+            <div class="stat-cell"><span class="stat-label">Episodes</span><span class="stat-val" id="modalEpisodes">—</span></div>
+            <div class="stat-cell"><span class="stat-label">Status</span><span class="stat-val" id="modalStatus">—</span></div>
+        </div>
+        <div class="modal-actions" id="modalActions"></div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+// Auto-count on load
+document.addEventListener('DOMContentLoaded', () => {
+    const count = document.querySelectorAll('.full-card').length;
+    document.getElementById('itemCount').textContent = count;
+});
+</script>
+</body>
+</html>

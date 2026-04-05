@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dressup">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books — The Collection</title>
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-orb bg-orb-1"></div>
+<div class="bg-orb bg-orb-2"></div>
+<div class="bg-orb bg-orb-3"></div>
+<div class="noise-layer"></div>
+
+<nav class="navbar">
+    <a href="index.html" class="nav-brand">◈ The Collection</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="anime.html">Anime</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="manhwa.html">Manhwa</a></li>
+        <li><a href="books.html" class="active">Books</a></li>
+        <li><a href="https://www.google.com/">Google it</a></li>
+    </ul>
+    <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="dressup" title="Dress Up Darling">🧵</button>
+        <button class="theme-btn" data-theme="solo"    title="Solo Leveling">⚔️</button>
+        <button class="theme-btn" data-theme="manga"   title="Manga">📖</button>
+        <button class="theme-btn" data-theme="avenger" title="Avenger">🦸</button>
+        <button class="theme-btn" data-theme="manhwa"  title="Manhwa">🌙</button>
+    </div>
+</nav>
+
+<div class="page-wrap">
+    <div class="page-hero">
+        <p class="hero-eyebrow">Category 04</p>
+        <h1 class="hero-title"><em>Books</em></h1>
+        <div class="hero-divider"></div>
+        <p style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);letter-spacing:0.2em;">
+            <span id="itemCount">—</span> titles &nbsp;·&nbsp; Literature & Fiction
+        </p>
+    </div>
+
+    <div class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search books by title, genre, author...">
+    </div>
+
+    <div class="sort-bar">
+        <span style="font-family:var(--font-mono);font-size:9px;color:var(--text-muted);letter-spacing:0.3em;text-transform:uppercase;margin-right:4px;">Sort:</span>
+        <button class="sort-btn active" data-sort="rating">⭐ Rating</button>
+        <button class="sort-btn" data-sort="alpha">A–Z</button>
+        <button class="sort-btn" data-sort="genre">Genre</button>
+        <button class="sort-btn" data-sort="status">Status</button>
+        <button class="sort-btn" data-sort="episodes">Pages</button>
+        <button class="sort-btn" data-sort="rank">My Rank</button>
+    </div>
+
+    <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="watching">▶ Reading</button>
+        <button class="filter-tab" data-filter="completed">✓ Read</button>
+        <button class="filter-tab" data-filter="wishlist">◇ Reading List</button>
+    </div>
+
+    <div id="cardList">
+
+        <div class="glass-card full-card" data-rank="1" data-title="Dune" data-genre="Sci-Fi / Political Drama" data-rating="9.5" data-episodes="412 Pages" data-episode-count="412" data-status="completed" data-watch="" data-read="">
+            <div class="full-card-rank">01</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Dune</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-scifi">Sci-Fi</span>
+                    <span class="meta-chip genre-thriller">Political Drama</span>
+                    <span class="meta-chip">Frank Herbert</span>
+                    <span class="meta-chip">412 Pages</span>
+                </div>
+                <span class="badge badge-completed">Read</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">9.5</div>
+                <div class="full-score-sub">/ 10</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="2" data-title="Project Hail Mary" data-genre="Hard Sci-Fi / Adventure" data-rating="9.3" data-episodes="476 Pages" data-episode-count="476" data-status="completed" data-watch="" data-read="">
+            <div class="full-card-rank">02</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Project Hail Mary</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-scifi">Hard Sci-Fi</span>
+                    <span class="meta-chip">Adventure</span>
+                    <span class="meta-chip">Andy Weir</span>
+                    <span class="meta-chip">476 Pages</span>
+                </div>
+                <span class="badge badge-completed">Read</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">9.3</div>
+                <div class="full-score-sub">/ 10</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="3" data-title="The Name of the Wind" data-genre="Epic Fantasy" data-rating="9.0" data-episodes="662 Pages" data-episode-count="662" data-status="watching" data-watch="" data-read="">
+            <div class="full-card-rank">03</div>
+            <div class="full-card-body">
+                <div class="full-card-title">The Name of the Wind</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-fantasy">Epic Fantasy</span>
+                    <span class="meta-chip">Patrick Rothfuss</span>
+                    <span class="meta-chip">662 Pages</span>
+                </div>
+                <span class="badge badge-watching">Reading</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">9.0</div>
+                <div class="full-score-sub">/ 10</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="4" data-title="The Way of Kings" data-genre="Epic Fantasy" data-rating="9.4" data-episodes="1007 Pages" data-episode-count="1007" data-status="wishlist" data-watch="" data-read="">
+            <div class="full-card-rank">04</div>
+            <div class="full-card-body">
+                <div class="full-card-title">The Way of Kings</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-fantasy">Epic Fantasy</span>
+                    <span class="meta-chip">Brandon Sanderson</span>
+                    <span class="meta-chip">1007 Pages</span>
+                </div>
+                <span class="badge badge-wishlist">Reading List</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">9.4</div>
+                <div class="full-score-sub">/ 10</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="5" data-title="Flowers for Algernon" data-genre="Sci-Fi / Drama / Psychological" data-rating="8.7" data-episodes="311 Pages" data-episode-count="311" data-status="completed" data-watch="" data-read="">
+            <div class="full-card-rank">05</div>
+            <div class="full-card-body">
+                <div class="full-card-title">Flowers for Algernon</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip genre-scifi">Sci-Fi</span>
+                    <span class="meta-chip genre-drama">Drama</span>
+                    <span class="meta-chip genre-thriller">Psychological</span>
+                    <span class="meta-chip">311 Pages</span>
+                </div>
+                <span class="badge badge-completed">Read</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">8.7</div>
+                <div class="full-score-sub">/ 10</div>
+            </div>
+        </div>
+
+        <div class="glass-card full-card" data-rank="6" data-title="1984" data-genre="Dystopian / Political Sci-Fi" data-rating="8.9" data-episodes="328 Pages" data-episode-count="328" data-status="wishlist" data-watch="" data-read="">
+            <div class="full-card-rank">06</div>
+            <div class="full-card-body">
+                <div class="full-card-title">1984</div>
+                <div class="full-card-meta">
+                    <span class="meta-chip">Dystopian</span>
+                    <span class="meta-chip genre-scifi">Political Sci-Fi</span>
+                    <span class="meta-chip">George Orwell</span>
+                    <span class="meta-chip">328 Pages</span>
+                </div>
+                <span class="badge badge-wishlist">Reading List</span>
+            </div>
+            <div class="full-card-right">
+                <div class="full-score">8.9</div>
+                <div class="full-score-sub">/ 10</div>
+            </div>
+        </div>
+
+        <!-- ADD MORE BOOKS HERE -->
+
+    </div>
+</div>
+
+<div class="modal-backdrop" id="detailModal">
+    <div class="modal-box">
+        <button class="modal-close" id="modalCloseBtn">✕</button>
+        <div class="modal-tag" id="modalTag">BOOK</div>
+        <h2 class="modal-title" id="modalTitle">Title</h2>
+        <div class="modal-stats">
+            <div class="stat-cell"><span class="stat-label">Genre</span><span class="stat-val" id="modalGenre">—</span></div>
+            <div class="stat-cell"><span class="stat-label">Rating</span><span class="stat-val big" id="modalRating">—</span></div>
+            <div class="stat-cell"><span class="stat-label">Pages</span><span class="stat-val" id="modalEpisodes">—</span></div>
+            <div class="stat-cell"><span class="stat-label">Status</span><span class="stat-val" id="modalStatus">—</span></div>
+        </div>
+        <div class="modal-actions" id="modalActions"></div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('itemCount').textContent = document.querySelectorAll('.full-card').length;
+});
+</script>
+</body>
+</html>
