@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bhumeshverse.vercel.app/sitemap.xml
